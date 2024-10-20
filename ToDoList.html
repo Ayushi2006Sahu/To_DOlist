@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            justify-content: center;
+        }
+
+        .js-name-input {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #007acc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-left: 5px;
+        }
+
+        button:hover {
+            background-color: #005f99;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #e0f7fa;
+            border: 1px solid #007acc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 350px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        /* Style for completed tasks */
+        .completed-task {
+            text-decoration: line-through; /* Strikethrough effect */
+            color: #999; /* Light color for completed tasks */
+            font-style: italic; /* Optional style to differentiate */
+        }
+
+        /* Task completion count */
+        .js-completed-count {
+            font-size: 1.2rem;
+            color: green;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px; /* Reduce padding for smaller screens */
+            }
+
+            .js-name-input {
+                width: 100%; /* Full width on mobile */
+                font-size: 1rem; /* Slightly smaller font size */
+            }
+
+            button {
+                width: 100%; /* Make buttons full width */
+                font-size: 1rem; /* Adjust font size */
+                margin-top: 5px; /* Space between buttons */
+            }
+
+            .task-item {
+                width: 100%; /* Full width for task items */
+                padding: 8px; /* Reduce padding */
+            }
+
+            .js-completed-count {
+                font-size: 1rem; /* Smaller font size for count */
+            }
+          }
+    </style>
+</head>
+<body>
+    <p>To Do List</p>
+    <input placeholder="To Do Name" class="js-name-input">
+    <button onclick="addtoDo()">ADD</button>
+
+    <div class="js-todo-list"></div>
+
+    <!-- Completed task count display -->
+    <div class="js-completed-count">Completed Tasks: 0</div>
+
+    <script src="ToDOList.js"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles/11-todo-list.css">
+  </head>
+  <body>
+    <p>Todo List</p>
+
+    <div class="todo-input-grid">
+      <input placeholder="Todo name"
+        class="js-name-input name-input">
+      <input type="date"
+        class="js-due-date-input due-date-input">
+      <button onclick="
+        addTodo();
+      " class="add-todo-button">Add</button>
+    </div>
+
+    <div class="js-todo-list todo-grid"></div>
+
+    <script src="scripts/11-todo-list.js"></script>
+  </body>
+</html> -->
